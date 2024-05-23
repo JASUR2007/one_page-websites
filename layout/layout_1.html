@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<title></title>
+	<style>
+
+	body{
+		background: linear-gradient(90deg,blue,purple,red);
+		display: flex;
+		justify-content: center;
+		padding:50px 0;
+		}
+	.main {
+		width: 80%;
+
+	}
+	header {
+		grid-column-gap: 25px;
+		height: 40px;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+	}
+	header a {
+		text-transform: uppercase;
+		font-family: 'El Messiri', sans-serif;
+		color: black;
+		text-decoration: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: yellow;
+	}
+	.banner {
+		height: 450px;
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-column-gap:20px;
+		margin: 20px 0;
+	}
+	.left_banner{
+		text-transform:capitalize;
+		background-image: url(photo_2021-07-23_15-25-54.jpg);
+		background-size: cover;
+		display: flex;
+		flex-direction:column;
+		justify-content: center;
+		padding-left: 30px;
+		box-sizing: border-box;
+		color: black;
+		align-items: flex-start;
+	}
+	.right_banner {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		grid-row-gap:20px;
+	}
+	.prices{
+		background-color: yellow;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		line-height: 5px;
+	}
+	.left_banner > * {
+		background-color: yellow;
+	} 
+	.bars {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 20px;
+		margin-bottom: 20px;
+	}
+	.bar{
+		justify-content: center;
+		text-align: center;
+		background-color: white;
+		padding: 5px;
+		box-sizing: border-box;
+	}
+	span{
+		font-size: 30px;
+	}
+	.taco {
+		background-color: white;
+		display: grid;
+		grid-template-columns: 1fr 0.85fr 1.15fr;
+		grid-column-gap: 20px;
+		margin-bottom: 20px;
+		justify-content: center;
+	}
+	.taco_right p {
+		line-height: 35px;
+	}
+	.taco>img {
+		width: 60%;
+	}
+	.taco_image img {
+		width: 45%;
+	} 
+	.taco_image{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	button a {
+		color: black;
+		text-decoration: none;
+	}
+	button{
+		margin-top: -12px;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		height: 28px;
+		border: none;
+		background-color: darkorange;
+		width: 130px;
+	}
+	.some{
+		font-size: 25px;
+		color: white;
+		justify-content: center;
+		position: relative;
+		display: flex;
+	}
+	.some::before {
+		margin-right: 630px;
+		display: flex;
+		margin-top: 15px;
+		height: 5px;
+		width: 350px;
+		content: '';
+		position: absolute;
+		background: linear-gradient(120deg,blue,orange,yellow);
+	}
+	.some::after {
+		margin-left: 630px;
+		display: flex;
+		margin-top: 15px;
+		height: 5px;
+		width: 350px;
+		content: '';
+		position: absolute;
+		background: linear-gradient(90deg,yellow,red);
+	}
+	.img01 {
+		grid-column-gap: 20px;
+		grid-template-columns: repeat(5,1fr);
+		margin-top: 30px;
+		display:grid;
+		height: 100px;
+	}
+	.img01 img {
+		display: flex;
+		height: 100%;
+		width: 100%;
+	} 
+	.img02 {
+		grid-column-gap: 20px;
+		grid-template-columns: repeat(5,1fr);
+		margin-top: 50px;
+		display:grid;
+		height: 100px;
+	}
+	.img02 img {
+		margin-top: 5px;
+		display: flex;
+		height: 100%;
+		width: 100%;
+	} 
+	@media (min-width:300px) and (max-width:500px) {
+		body{
+		background: linear-gradient(90deg,blue,purple,red);
+		display: flex;
+		justify-content: center;
+		padding:20px 0;
+		}
+	.main {
+		width: 90%;
+
+	}
+	header {
+		grid-column-gap: 15px;
+		height: 30px;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+	}
+	header a {
+		font-size: 12px;
+		text-transform: uppercase;
+		font-family: 'El Messiri', sans-serif;
+		color: black;
+		text-decoration: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: yellow;
+	}
+	.banner {
+		height:300px;
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-column-gap:20px;
+		margin: 10px 0;
+	}
+	.left_banner p {
+		padding: 0px;
+	}
+	.left_banner h1 {
+		font-size: 17px;
+	}
+	.left_banner{
+		width: 250px;
+		text-transform:capitalize;
+		background-image: url(photo_2021-07-23_15-25-54.jpg);
+		background-size:center;
+		background-position: top;
+		height: 300px;
+		display: flex;
+		flex-direction:column;
+		justify-content: center;
+		box-sizing: border-box;
+		color: black;
+		align-items: flex-start;
+	}
+	.right_banner {
+		width: 80px;
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		grid-row-gap:20px;
+	}
+	.right_banner h1 {
+		font-size: 14px;
+	}
+	.right_banner p {
+		font-size: 8px;
+	}
+	.prices{
+		background-color: yellow;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		line-height: 5px;
+	}
+	.left_banner > * {
+		background-color: yellow;
+	} 
+	.bars {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 20px;
+		margin-bottom: 20px;
+	}
+	.bar{
+		justify-content: center;
+		text-align: center;
+		background-color: white;
+		padding: 5px;
+		box-sizing: border-box;
+	}
+	.bar h2 {
+		font-size: 12px;
+	}
+	.bar p {
+		font-size: 8px;
+	}
+	span{
+		font-size: 15px;
+	}
+	.taco {
+		height: 80px;
+		background-color: white;
+		display: grid;
+		grid-template-columns: 0.8fr 1.4fr 0.5fr;
+		grid-column-gap: 10px;
+		margin-bottom: 10px;
+		justify-content: center;
+	}
+	.taco_right h1 {
+		margin-top: 0px;
+		font-size: 12px;
+	}
+	.taco_right p {
+		margin-bottom: 12px;
+		margin-top: 0px;
+		font-size: 8px;
+		line-height: 18px;
+	}
+	.taco>img {
+		width: 80%;
+	}
+	.taco_image img {
+		width: 45%;
+	} 
+	.taco_image{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	button a {
+		color: black;
+		text-decoration: none;
+	}
+	button{
+		font-size: 8px;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		height: 15px;
+		border: none;
+		background-color: darkorange;
+		width: 70px;
+	}
+	.some{
+		font-size: 16px;
+		color: white;
+		justify-content: center;
+		position: relative;
+		display: flex;
+	}
+	.some::before {
+		margin-right:250px;
+		display: flex;
+		margin-top: 15px;
+		height: 5px;
+		width: 140px;
+		content: '';
+		position: absolute;
+		background: linear-gradient(120deg,blue,orange);
+	}
+	.some::after {
+		margin-left:250px;
+		display: flex;
+		margin-top: 15px;
+		height: 5px;
+		width: 140px;
+		content: '';
+		position: absolute;
+		background: linear-gradient(90deg,yellow,red);
+	}
+	.img01 {
+		grid-column-gap: 10px;
+		grid-template-columns: repeat(5,1fr);
+		margin-top: 10px;
+		display:grid;
+		height: 60px;
+	}
+	.img01 img {
+		display: flex;
+		height: 100%;
+		width: 100%;
+	} 
+	.img02 {
+		grid-column-gap: 10px;
+		grid-template-columns: repeat(5,1fr);
+		margin-top: 20px;
+		display:grid;
+		height: 60px;
+	}
+	.img02 img {
+		margin-top: 5px;
+		display: flex;
+		height: 100%;
+		width: 100%;
+	} 
+}
+	</style>
+
+<body>
+	<div class="main">
+		<header>
+			<a href="#">tacos</a>
+			<a href="">deserts</a>
+			<a href="">wines</a>
+			<a href="">deserts</a>
+			<a href="">reservations</a>
+		</header>
+		<div class="banner">
+			<div class="left_banner">
+				<h1>Terry's tacos joint</h1>
+				<p>pretty good taco</p>
+			</div>
+			<div class="right_banner">
+				<div class="prices">
+					<h1>$1.50</h1>
+					<p>Tacos</p>
+				</div>
+				<div class="prices">
+					<h1>$5.00</h1>
+					<p>Something</p>
+				</div>
+			</div>
+		</div>
+		<div class="bars">
+			<div class="bar">
+				<span>😉</span>
+				<h2>Tacos</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+			</div>
+			<div class="bar">
+				<span>🥪</span>
+				<h2>Tacos</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+			</div>
+			<div class="bar">
+				<span>🥞</span>
+				<h2>Tacos</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+			</div>
+			<div class="bar">
+				<span>🍖</span>
+				<h2>Tacos</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+			</div>
+		</div>
+		<div class="taco">
+			<div class="taco_image">
+				<img src="http://freepngclipart.com/download/taco/52869-food-junk-bell-fast-taco-png-file-hd.png">
+			</div>
+			<div class="taco_right">
+				<h1>Feature Taco</h1>
+				<p>Slim Profile,easy to hold and loaded with cheese This  is the one you have been waiting</p>
+				<button><a href="#">Learn more>>></a></button>
+			</div>
+		</div>
+		<div class="some">
+			Instant Grams
+		</div>
+		<div class="img01">
+			<img src="http://cs8.pikabu.ru/post_img/big/2016/03/23/9/1458743931180150718.jpg">
+			<img src="http://cs8.pikabu.ru/post_img/big/2016/03/23/9/1458743931180150718.jpg">
+			<img src="http://cs8.pikabu.ru/post_img/big/2016/03/23/9/1458743931180150718.jpg">
+			<img src="http://cs8.pikabu.ru/post_img/big/2016/03/23/9/1458743931180150718.jpg">
+			<img src="http://cs8.pikabu.ru/post_img/big/2016/03/23/9/1458743931180150718.jpg">
+		</div>
+		<div class="img02">
+			<img src="http://cs8.pikabu.ru/post_img/big/2016/03/23/9/1458743931180150718.jpg">
+			<img src="http://cs8.pikabu.ru/post_img/big/2016/03/23/9/1458743931180150718.jpg">
+			<img src="http://cs8.pikabu.ru/post_img/big/2016/03/23/9/1458743931180150718.jpg">
+			<img src="http://cs8.pikabu.ru/post_img/big/2016/03/23/9/1458743931180150718.jpg">
+			<img src="http://cs8.pikabu.ru/post_img/big/2016/03/23/9/1458743931180150718.jpg">
+		</div>
+	</div>
+
+</body>
+</html>

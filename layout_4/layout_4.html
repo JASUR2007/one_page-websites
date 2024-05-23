@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		body{
+
+		  margin: 0;
+		  padding: 0;
+		}
+		.main_1{
+			height: 100vh;
+			background-color: #0a1f7af2;
+		}
+		header{
+			height: 80px;
+			display: flex;
+
+		}
+		.div{
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+		.begin{
+			width: 60%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.wifi{
+			margin-left: 70px;
+			justify-content: flex-start;
+			width: 20%;
+			display: flex;
+			align-items: center;
+		}
+		a{
+			color: white;
+			text-decoration: none;
+		}
+		i {
+			color: #00bdff;
+		}
+		.begin button {
+
+			border:#00bdff 2px solid;
+			background-color:#0a1f7af2;
+			height: 42px;
+			width: 150px;
+			border-radius: 50px;
+		}
+		.begin button a {
+		color:#00bdff ;
+		}
+		ul>a>span>i{
+			margin-right: 5px;
+		}
+		.main__1{
+
+			display: flex;
+		}
+		.power{
+			flex-direction: column;
+			justify-content: center;
+			display: flex;
+			height: 80vh;	
+			color: white;
+			width: 50%;
+		}
+		.power h1 {
+			margin-left:70px ;
+		}
+		.picturenotebook{
+			width: 50%;
+		}
+		.ul{
+			width: 80%;
+			font-size: 20px;
+			display: flex;
+			justify-content: space-around;
+		}
+		.h1{
+			text-align: center;
+			line-height: 18px;
+		}
+		.send{
+			margin-top: 5px;	
+			margin-left: 70px;			
+			border:#00bdff 2px solid;
+			background-color:#00bdff;
+			height: 42px;
+			width: 150px;
+			border-radius: 50px;
+		}
+		.send a {
+			color: black;
+		}
+		.picturenotebook {
+			display: flex;
+			justify-content: center;
+		}
+		.picturenotebook img {
+			height: 70%;
+		}
+		.main_2{
+			display: flex;
+			
+		}
+		.main_left_2{
+			margin-left: 50px;
+			width: 100%;
+
+		}
+		.main_left_2 img {
+			width: 100%;
+			height: 90%;
+		}
+		.main_right_2{
+			width: 50%;
+			
+			margin-left: 100px;
+		}
+		.maintop p  {
+			font-size: 19px;
+			color: grey;
+		}
+		.mainbutton p{
+			font-size: 19px;
+			color: grey;
+		}
+		.main_3{
+			height: 	380px;
+			display: flex;
+		}
+		.main_3picture{
+			width: 50%
+
+					}
+		.main_3text{
+			width: 50%;
+			margin-right: 50px;
+			margin-left: 50px;
+		}
+		img{
+			
+			width: 95%;
+		}
+		.main_4{
+			display: 	flex;
+			height: 250px;
+			background-color: 	blue;
+			justify-content: space-around;
+		}
+		.prst{
+				
+				height: 	100%;
+		}
+		.prst button {
+			border:#00ffcdd1 1px solid;
+			height: 40px;
+			width: 150px;
+			color: black;
+			border-radius: 20px;
+			background-color: #00ffcdd1;
+		}
+		.prst p {
+			line-height: 40px;
+			font-size: 30px;
+			color: white;
+			width: 400px;
+		}
+		.image_girl{
+		
+			margin-top: -30px;
+			
+		}
+		.image_girl img{
+				width: 	100%;
+				height: 	92%;
+		}
+		.main__4 {
+			margin-top:80px ;
+			
+			line-height: 16px;
+		}
+		.sending {
+			height: 400px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+
+		}
+		.sending img {
+			width: 100px;
+			height: 100px;
+		}
+		.sending>div {
+			display: flex;
+			height: 230px;
+			width: 400px;
+			color: white;
+
+		}
+		.sending img {
+			display: flex;
+			align-items: center;
+		}
+		.sending>div>div{
+			border-radius: 20px;
+			background-color: #0a1f7af2;
+		}
+		.sending p {
+
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.sending span {
+			margin-left: 20px;
+			display: flex;
+			align-items: center;
+		}
+		.sending span::before {
+			margin-left: -20px;
+			content: "";
+			width: 10px;
+			height: 10px;
+			background-image: url("Безымянный.png");
+		} 
+		.sp{
+			text-align: center;
+		}
+		.main__4{
+			height: 600px;
+		}
+		.main_5{
+
+		}
+		.maintop_5 {
+			line-height: 18px;
+			display: flex;
+			justify-content: space-around;
+		}
+		.mainbuttom_5{
+			line-height: 18px;
+			display: flex;
+			justify-content: space-around;
+			margin-top: 20px;
+		}
+		.top_5{
+			height: 200px;
+			width: 300px;
+			text-align: center;
+		}
+		.top_5 img {
+			width: 40px;
+			height: 40px;
+		}
+		.main_6 {
+			margin-top: 20px;
+			display: flex;
+			line-height: 8px;
+			justify-content: space-around;
+			height: 550px;
+			align-items: center;
+		}
+		.main6go {
+			width: 300px;
+		}
+		.main6go img {
+			border-radius: 20px;
+		}
+		.main6go p{
+			color: grey;
+		}
+		.main6go button{
+			border:#00ffe5e3 1px solid;
+			border-radius: 20px;
+			width: 160px;
+			height: 40px;
+			background-color: #00ffe5e3;
+		}
+		.main_7{
+			line-height: 10px;
+			text-align: center;
+			height: 100vh;
+		}
+		.mainimg_7{
+			margin-top:70px;
+			display: flex;
+			justify-content: space-around;
+		}
+		.mainimg_7 img {
+			width: 280px;
+			height: 350px;
+		}
+		footer{
+			background-color: #0a1f7af2;
+			height: 80px;
+			display: flex;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="main_1">
+		<header>
+			
+				<a href="#" class="wifi">
+					
+						<i class="fas fa-wifi"></i>
+						<h2>UZboost</h2>
+					
+				</a>
+				<div class="div">
+					<ul class="begin">
+						<a href="#"><span><i class="fas fa-envelope"></i>gala@gmail.com</span></a>
+						<a href="#"><span><i class="fas fa-phone-volume"></i> +7 985 323-32-34</span></a>
+						<button><a href="">Заказать звонок</a></button>
+					</ul>
+			</div>
+		</header>
+		<div class="main__1">
+			<div class="power">
+				<h1>Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Inventore vel nam possimus explicabo quam est culpa dolores, sed asda sad dasda </h1>
+				<div class="ul">
+					<ul>
+						<li>Место за 1день</li>
+						<li>Низкая цена</li>
+					</ul>
+					<ul>
+						<li>Индикатор зор</li>
+						<li>1 год пользования</li>
+					</ul>
+				</div>
+					<button class="send"><a href="">Оставьте заявку</a></button>
+			</div>
+			<div class="picturenotebook">
+				<img src="photo_2021-11-01_15-27-20.jpg" alt="">	
+			</div>
+		</div>
+	</div>
+	<div class="h1">
+		<h1>Усилием сотовую связь и интернет в </h1>
+		<h1>любом помещении под ключ</h1>
+	</div>			
+	<div class="main_2">
+		<div class="main_left_2">
+			<img src="photo_2021-11-01_15-50-03.jpg" alt="">
+		</div>
+		<div>
+			<div class="main_right_2">
+				<div class="maintop">
+					<h2>Загородный дом</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum a laudantium laboriosam. Sint alias, consequuntur obcaecati vitae, asperiores animi placeat possimus quis rerum consectetur labore consequatur aperiam, aliquam distinctio, eligendi?</p>
+				</div>
+				<div class="mainbutton">
+					<h2>Офис</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum a laudantium laboriosam. Sint alias, consequuntur obcaecati vitae, asperiores animi placeat possimus quis rerum consectetur labore consequatur aperiam, aliquam distinctio, eligendi?
+				</p>
+				</div>
+			</div>
+		
+			</div>
+		</div>
+	</div>
+	<div class="main_3">
+		<div class="main_3text">
+			<div>
+				<h1>Подземная парковка для детей</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae fuga veritatis esse earum ipsam adipisci magnam eius, maiores et! Quia eos dignissimos dolor, sapiente optio corrupti impedit rem aspernatur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur autem, ad saepe totam laborum facilis, temporibus ducimus explicabo, quibusdam odio similique quos,</p>
+			</div>
+			<div>
+				<h1>Подземная парковка для детей</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae fuga veritatis esse earum ipsam adipisci magnam eius, maiores et! Quia eos dignissimos dolor, sapiente optio corrupti impedit rem aspernatur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur autem, ad saepe totam laborum facilis, temporibus ducimus explicabo, quibusdam odio similique quos,</p>
+			</div>
+		</div>
+		<div class="main_3picture">
+			<img src="https://rspectr.com/files/articles/5g-new_-42b100f6ffe69f1169d10a43c0ee2529-416da9a04ae203a3f6e81cf1820ce9a6.png" alt="" >
+		</div>
+	</div>
+	<div class="main_4">
+		<div class="	image_girl">
+			<img src="Group 2230.png" alt="">
+		</div>
+		<div class="prst">
+			<p>Пришлите коммерчиское предложение из другой компании и получите скидку</p>
+			<button>Отправить КП</button>
+		</div>
+	</div>
+	<div class="main__4">
+		<span class="sp">
+			<h1>Усилим сотовую связь и интернет в</h1>
+			<h1>любом помещение ключ</h1>
+		</span>
+		<div class="sending">
+			<div class="leftforsending">
+				<div>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam in quaerat minima iusto!</p>
+					<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Tempora, assumenda </p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 		Atque, tenetur tempore tempora, vero </p>
+				</div>
+				<span  class="img"><img src="Ellipse 202.png" alt=""></span>
+				
+			</div>
+			<div class="rightforsending">
+				<div>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam in quaerat minima iusto!
+					Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Tempora, assumenda 
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 		Atque, tenetur tempore tempora, vero </p>
+				</div>
+				<span class="img"><img src="Ellipse 202.png" alt=""></span>
+			</div>
+		</div>
+	</div>
+	<div class="main_5">
+		<div class="maintop_5">
+			<div class="top_5">
+				<img src="graphic-design 1.png" alt="">
+				<h3>Сохрани дом</h3>
+				<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quis cumque, mollitia porro accusamus, obcaecati nisi. </p>
+			</div>
+			<div class="top_5">
+				<img src="graphic-design 1.png" alt="">
+				<h3>Сохрани дом</h3>
+				<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quis cumque, mollitia porro accusamus, obcaecati nisi. </p>
+			</div>
+			<div class="top_5">
+				<img src="graphic-design 1.png" alt="">
+				<h3>Сохрани дом</h3>
+				<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quis cumque, mollitia porro accusamus, obcaecati nisi. </p>
+			</div>
+		</div>
+		<div class="mainbuttom_5">
+			<div class="top_5">
+				<img src="graphic-design 1.png" alt="">
+				<h3>Сохрани дом</h3>
+				<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quis cumque, mollitia porro accusamus, obcaecati nisi. </p>
+			</div>
+			<div class="top_5">
+				<img src="graphic-design 1.png" alt="">
+				<h3>Сохрани дом</h3>
+				<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quis cumque, mollitia porro accusamus, obcaecati nisi. </p>
+			</div>
+			<div class="top_5">
+				<img src="graphic-design 1.png" alt="">
+				<h3>Сохрани дом</h3>
+				<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quis cumque, mollitia porro accusamus, obcaecati nisi. </p>
+			</div>
+		</div>
+	</div>
+	<div class="main_6">
+		<div class="main6go">
+			<img src="Rectangle 1198.png" alt="">
+			<h4>Комплект всех сторон и частей</h4>
+			<p>от 35,000,00 Sum</p>
+			<button>Подробнее</button>
+		</div>
+		<div class="main6go">
+			<img src="Rectangle 1198.png" alt="">
+			<h4>Комплект всех сторон и частей</h4>
+			<p>от 35,000,00 Sum</p>
+			<button>Подробнее</button>
+		</div>
+		<div class="main6go">
+			<img src="Rectangle 1198.png" alt="">
+			<h4>Комплект всех сторон и частей</h4>
+			<p>от 35,000,00 Sum</p>
+			<button>Подробнее</button>
+		</div>
+	</div>
+	<div class="main_7">
+		<h2>Гарантия на продажу и тд</h2>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+		<p> Et labore vero voluptatibus cumque</p>
+		<div class="mainimg_7">
+			<img src="images.jpg" alt="">
+			<img src="images.jpg" alt="">
+			<img src="images.jpg" alt="">
+			<img src="images.jpg" alt="">
+		</div>
+	</div>
+	<footer>
+			
+				<a href="#" class="wifi">
+					
+						<i class="fas fa-wifi"></i>
+						<h2>UZboost</h2>
+					
+				</a>
+				<div class="div">
+					<ul class="begin">
+						<a href="#"><span><i class="fas fa-envelope"></i>gala@gmail.com</span></a>
+						<a href="#"><span><i class="fas fa-phone-volume"></i> +7 985 323-32-34</span></a>
+						
+					</ul>
+			</div>
+		</footer>
+</body>
+</html>

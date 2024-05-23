@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0>
+	<title>Docement</title>
+	<link rel="stylesheet type="text/css" href="16-dars.css">
+
+	<style>
+	
+	body{
+	/*flex-direction: column;*/
+	margin: 0;
+	width: 100vw;
+	height:100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: grey;
+	/*flex-wrap: wrap;*/
+
+}
+
+.man {
+	width: 780px;
+	display: flex;
+	overflow: hidden;
+}
+
+.slide {
+	display: flex;
+	animation-name:slider;
+	animation-duration: 10s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+}
+
+
+.main{
+	width: 220px;
+	/*height: 380px;*/
+	background-color: white	;
+	border-radius: 10px;
+	margin: 20px;
+	transition: 0.9s;
+	overflow: hidden;
+
+
+
+}
+
+.main:hover{
+
+	transform: translateY(-20px);
+	
+}
+img{
+	width: 100%;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/*border-top-left-radius: 20px;*/
+	/*border-top-right-radius: 30px;*/
+}
+
+
+.man:hover > .slide {
+	animation-play-state: paused;
+
+}
+
+
+.text{
+	padding: 10px;
+}
+
+.title {
+	margin: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+}
+
+.sold{
+	color: black;
+	text-decoration: none;
+	transition: 0.3s;
+
+}
+
+a{
+	color: black;
+	text-decoration: none;
+
+}
+
+
+
+a:hover{
+	color: red;
+	text-decoration: underline;
+}
+
+.sell{
+	margin: 10px;
+	font-size: 12px;
+	display: flex;
+	justify-content: space-between;
+	line-height: 40px;
+	line-height: 40px;
+	text-indent: 10px;
+	letter-spacing: 2px;
+	text-shadow: 5px 5px 2px black;
+	letter-spacing: 2px;
+	text-decoration: none;
+}
+.sell:nth-child(1) {
+			color: blue;	
+		}
+
+@keyframes slider {
+
+	0%{
+		transform: translateX(0);
+	}
+	30%{
+		transform: translateX(-260px);
+	}
+	40%{
+		transform: translateX(-260px);
+	}
+	60%{
+		transform: translateX(-520px);
+	}
+	80%{
+		transform: translateX(-520px);
+	}
+
+	90%{
+		transform: translateX(-780px);
+	}
+	
+
+	100% {
+		transform: translateX(0);
+	}
+
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+
+	.man {
+		width: 190px;
+	}
+
+	.main {
+		width: 150px;
+	}
+
+
+
+@keyframes slider {
+
+	0%{
+		transform: translateX(0);
+	}
+	30%{
+		transform: translateX(-190px);
+	}
+	40%{
+		transform: translateX(-190px);
+	}
+	60%{
+		transform: translateX(-380px);
+	}
+	80%{
+		transform: translateX(-380px);
+	}
+
+	90%{
+		transform: translateX(-570px);
+	}
+	
+
+	100% {
+		transform: translateX(0);
+	}
+
+}
+
+
+
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+	.man {
+		width: 480px;	
+	}
+
+	.main {
+		width: 200px;
+
+	}
+
+
+
+@keyframes slider {
+
+	0%{
+		transform: translateX(0);
+	}
+	30%{
+		transform: translateX(-240px);
+	}
+	40%{
+		transform: translateX(-240px);
+	}
+	60%{
+		transform: translateX(-480px);
+	}
+	80%{
+		transform: translateX(-480px);
+	}
+
+	90%{
+		transform: translateX(-720px);
+	}
+	
+
+	100% {
+		transform: translateX(0);
+	}
+
+}
+}
+
+	
+	
+	</style>
+
+
+
+</head>
+<body>
+
+
+	<div class="man">
+      <div class="slide">
+	   <div class="main">
+			
+
+			<img src="https://ae04.alicdn.com/kf/Hd681f75b4c114e2a8da4abd8de326f27V/Shockproof-Armor-Phone-Case-For-iPhone-6-6s-7-8-SE-2020-Strong-Anti-Drop-Bracket.jpg_220x220xz.jpg" width="100%" >
+				
+			
+
+			<div class="text">
+				<div class="hear"><a href="makefg.png"></a></div>
+				<p class="title">
+					<a href="https://kun.uz">
+						Противоударный армированный чехол для телефона iPhone 6, 6s, 7, 8, SE, 2020 Прочный противоударный защитный чехол с кронштейном для iPhone 6 Plus, 7 Plus, 8 Plus
+					</a>
+				</p>
+				<h3>UZS 46,096.79</h3>
+				<div class="sell">
+					<a class="sold" href="https://daryo.uz">1 продано</a>
+				<a class="sold"  href="https://olx.uz">something</a>
+
+				</div>
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb"></a>			
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb">Kaisen official store</a>			
+
+			</div>
+		</div>
+
+
+		<div class="main" >
+			<img src="https://ae04.alicdn.com/kf/H8e040f24bb9947f88e83bca13faf56089/KPUSAGRT-Pompiers-Paris-France-Firefighter-Painted-Phone-Case-for-iPhone-11-pro-XS-MAX-8-7.jpg_220x220xz.jpg" width="100%">
+			<div class="text">
+				<p class="title">
+					<a href="https://kun.uz">
+						Противоударный армированный чехол для телефона iPhone 6, 6s, 7, 8, SE, 2020 Прочный противоударный защитный чехол с кронштейном для iPhone 6 Plus, 7 Plus, 8 Plus
+					</a>
+				</p>
+				<h3>UZS 97,096.79</h3>
+				<div class="sell">
+					<a class="sold" href="https://daryo.uz">4 продано</a>
+				<a class="sold"  href="https://olx.uz">something</a>
+
+				</div>
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb"></a>			
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb">Kaisen official store</a>			
+
+			</div>
+		</div>
+
+		<div class="main">
+			<img src="https://ae04.alicdn.com/kf/H1381e5b985ba484caff6925805a91c53N/Fashion-Cool-Rock-Full-Metal-Punk-Spikes-Studs-Rivet-Bling-Diamond-Case-Cover-For-iPhone-12.jpg_220x220xz.jpg"  width="100%">
+			
+			<div class="text">
+				<p class="title">
+					<a href="https://kun.uz">
+						Противоударный армированный чехол для телефона iPhone 6, 6s, 7, 8, SE, 2020 Прочный противоударный защитный чехол с кронштейном для iPhone 6 Plus, 7 Plus, 8 Plus
+					</a>
+				</p>
+				<h3>UZS 99,096.79</h3>
+				<div class="sell">
+					<a class="sold" href="https://daryo.uz">55 продано</a>
+				<a class="sold"  href="https://olx.uz">something</a>
+
+				</div>
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb"></a>			
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb">Kaisen official store</a>			
+
+			</div>
+		</div>
+
+		<div class="main">
+			<img src="https://ae04.alicdn.com/kf/H6286b380ffe1425e8376e84b7ceedbdcS/For-Samsung-Galaxy-S21-Luxury-Litchi-Striae-PU-Leather-Hard-Back-Cover-Case-For-Samsung-S21.jpg_220x220xz.jpg"  width="100%">
+			<div class="text">
+				<p class="title">
+					<a href="https://kun.uz">
+						Противоударный армированный чехол для телефона iPhone 6, 6s, 7, 8, SE, 2020 Прочный противоударный защитный чехол с кронштейном для iPhone 6 Plus, 7 Plus, 8 Plus
+					</a>
+				</p>
+				<h3>UZS 65,096.79</h3>
+				<div class="sell">
+					<a class="sold" href="https://daryo.uz">15 продано</a>
+				<a class="sold"  href="https://olx.uz">something</a>
+
+				</div>
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb"></a>			
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb">Kaisen official store</a>			
+
+			</div>
+		</div>
+
+		<div class="main">
+			<img src="https://ae04.alicdn.com/kf/H6286b380ffe1425e8376e84b7ceedbdcS/For-Samsung-Galaxy-S21-Luxury-Litchi-Striae-PU-Leather-Hard-Back-Cover-Case-For-Samsung-S21.jpg_220x220xz.jpg"  width="100%">
+			<div class="text">
+				<p class="title">
+					<a href="https://kun.uz">
+						Противоударный армированный чехол для телефона iPhone 6, 6s, 7, 8, SE, 2020 Прочный противоударный защитный чехол с кронштейном для iPhone 6 Plus, 7 Plus, 8 Plus
+					</a>
+				</p>
+				<h3>UZS 65,096.79</h3>
+				<div class="sell">
+					<a class="sold" href="https://daryo.uz">15 продано</a>
+				<a class="sold"  href="https://olx.uz">something</a>
+
+				</div>
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb"></a>			
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb">Kaisen official store</a>			
+
+			</div>
+		</div>
+
+				<div class="main">
+			<img src="https://ae04.alicdn.com/kf/H6286b380ffe1425e8376e84b7ceedbdcS/For-Samsung-Galaxy-S21-Luxury-Litchi-Striae-PU-Leather-Hard-Back-Cover-Case-For-Samsung-S21.jpg_220x220xz.jpg"  width="100%">
+			<div class="text">
+				<p class="title">
+					<a href="https://kun.uz">
+						Противоударный армированный чехол для телефона iPhone 6, 6s, 7, 8, SE, 2020 Прочный противоударный защитный чехол с кронштейном для iPhone 6 Plus, 7 Plus, 8 Plus
+					</a>
+				</p>
+				<h3>UZS 65,096.79</h3>
+				<div class="sell">
+					<a class="sold" href="https://daryo.uz">15 продано</a>
+				<a class="sold"  href="https://olx.uz">something</a>
+
+				</div>
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb"></a>			
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb">Kaisen official store</a>			
+
+			</div>
+		</div>
+
+				<div class="main">
+			<img src="https://ae04.alicdn.com/kf/H6286b380ffe1425e8376e84b7ceedbdcS/For-Samsung-Galaxy-S21-Luxury-Litchi-Striae-PU-Leather-Hard-Back-Cover-Case-For-Samsung-S21.jpg_220x220xz.jpg"  width="100%">
+			<div class="text">
+				<p class="title">
+					<a href="https://kun.uz">
+						Противоударный армированный чехол для телефона iPhone 6, 6s, 7, 8, SE, 2020 Прочный противоударный защитный чехол с кронштейном для iPhone 6 Plus, 7 Plus, 8 Plus
+					</a>
+				</p>
+				<h3>UZS 65,096.79</h3>
+				<div class="sell">
+					<a class="sold" href="https://daryo.uz">15 продано</a>
+				<a class="sold"  href="https://olx.uz">something</a>
+
+				</div>
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb"></a>			
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb">Kaisen official store</a>			
+
+			</div>
+		</div>
+
+				<div class="main">
+			<img src="https://ae04.alicdn.com/kf/H6286b380ffe1425e8376e84b7ceedbdcS/For-Samsung-Galaxy-S21-Luxury-Litchi-Striae-PU-Leather-Hard-Back-Cover-Case-For-Samsung-S21.jpg_220x220xz.jpg"  width="100%">
+			<div class="text">
+				<p class="title">
+					<a href="https://kun.uz">
+						Противоударный армированный чехол для телефона iPhone 6, 6s, 7, 8, SE, 2020 Прочный противоударный защитный чехол с кронштейном для iPhone 6 Plus, 7 Plus, 8 Plus
+					</a>
+				</p>
+				<h3>UZS 65,096.79</h3>
+				<div class="sell">
+					<a class="sold" href="https://daryo.uz">15 продано</a>
+				<a class="sold"  href="https://olx.uz">something</a>
+
+				</div>
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb"></a>			
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb">Kaisen official store</a>			
+
+			</div>
+		</div>
+
+				<div class="main">
+			<img src="https://ae04.alicdn.com/kf/H6286b380ffe1425e8376e84b7ceedbdcS/For-Samsung-Galaxy-S21-Luxury-Litchi-Striae-PU-Leather-Hard-Back-Cover-Case-For-Samsung-S21.jpg_220x220xz.jpg"  width="100%">
+			<div class="text">
+				<p class="title">
+					<a href="https://kun.uz">
+						Противоударный армированный чехол для телефона iPhone 6, 6s, 7, 8, SE, 2020 Прочный противоударный защитный чехол с кронштейном для iPhone 6 Plus, 7 Plus, 8 Plus
+					</a>
+				</p>
+				<h3>UZS 65,096.79</h3>
+				<div class="sell">
+					<a class="sold" href="https://daryo.uz">15 продано</a>
+				<a class="sold"  href="https://olx.uz">something</a>
+
+				</div>
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb"></a>			
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb">Kaisen official store</a>			
+
+			</div>
+		</div>
+
+				<div class="main">
+			<img src="https://ae04.alicdn.com/kf/Hdc42c49085cc43a6a262bd7c039f0b32P/Watercolor-Marble-Pattern-Case-for-iPhone-11-Soft-TPU-Ink-Painted-Case-for-iPhone-12-Pro.jpg_220x220xz.jpg"  width="100%">
+			<div class="text">
+				<p class="title">
+					<a href="https://kun.uz">
+						Противоударный армированный чехол для телефона iPhone 6, 6s, 7, 8, SE, 2020 Прочный противоударный защитный чехол с кронштейном для iPhone 6 Plus, 7 Plus, 8 Plus
+					</a>
+				</p>
+				<h3>UZS 65,096.79</h3>
+				<div class="sell">
+					<a class="sold" href="https://daryo.uz">15 продано</a>
+				<a class="sold"  href="https://olx.uz">something</a>
+
+				</div>
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb"></a>			
+				<a href="https://aliexpress.ru/store/4839200?spm=a2g0o.productlist.0.0.29b04dfbGE0Blb">Kaisen official store</a>			
+
+			</div>
+		</div>		
+
+	  </div>
+		
+	</div>
+
+
+
+		
+
+</body>
+</html>

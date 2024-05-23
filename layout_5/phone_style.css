@@ -1,0 +1,451 @@
+@media  (min-width: 481px)  and  (max-width: 768px){
+    *{}
+    body
+    {
+        width: 100%;
+
+    }
+    .vl
+    {
+        display: none;
+    }
+    nav .title{
+        margin-left:20px;
+    }
+    .header_def
+    {
+        display: none;
+    }
+    .header_phone
+    {
+        margin-left: 600px;
+        display: flex;
+        flex-direction: column;
+        height: 110vh;
+        left: 0;
+        top: 0;
+        background-color: white;
+        z-index: 10;
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        height: 110vh;
+        display: block;
+        transition: 1.2s;
+
+    }
+    .nav{
+        display: block;
+    }
+    .navbar_phone
+    {
+        padding-top: 40px;
+        line-height: 60px;
+        padding-bottom: 45px;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .navbar_phone > a
+    {
+        padding-left: 15px;
+        text-decoration: none;
+        font-family: 'Fira Sans Condensed';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 26px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        color: #151414;
+    }
+    .navbar_phone > span
+    {
+        padding-left: 15px;
+        text-decoration: none;
+        font-family: 'Fira Sans Condensed';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 26px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        color: #151414;
+    }    
+    .navbar_phone > span > a 
+    {
+        padding-left: 15px;
+        text-decoration: none;
+        font-family: 'Fira Sans Condensed';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        color: rgba(0, 0, 0, 0.3);
+        margin-top: 10px;        
+    }   
+    .navbar_phone > span > a > .ion_icon
+    {
+        margin-top: 22px;
+    }              
+    .facebook_phone > i{
+        margin-left: 7px;
+        margin-bottom: -15px;
+        position: absolute;
+        top: 67.2%;
+        font-size: 16px;
+    }
+    .header_send_phone{
+        padding-left: 15px;
+    }
+    .header_send_phone > button{
+        background: #C3002F;
+        border: none;
+        width:  214px;
+        height: 47px;
+        color: #FFFFFF;
+        font-size: 17px;
+        font-weight: 400;
+    }
+    .btn1
+    {
+        display: none;
+   }
+   .links
+   {
+    display: none;
+   }
+   .left-p 
+    {
+      display: none;
+    }
+    .left-p h3 {
+        display: none;
+    }
+    .bar
+    {
+        display: block;
+        font-size: 26px;
+        position: absolute;
+        top: 2.1%;
+        right: 5%;    
+    }
+    .nav_open
+    {
+        margin-left: 0;
+        transition: 1.2s;
+    }  
+    .close_navbar
+     {
+        width: 29px;
+        height: 30px;
+        display: none;
+        position: absolute;
+        top: 2%;
+        right: 4%;
+        font-size: 44px;
+    }
+    .open_bar
+    {
+        display: block;
+        z-index: 11;
+    }
+    .mid-r
+    {
+        padding-left: 20px;
+        margin-top: 40px;
+    }
+    .br
+    {
+        display: none;
+    }
+    .mid_r_text
+    {
+        font-size: 34px;
+        width: 411px;
+        height: 122px;
+    }
+    middle{
+        flex-direction: column;
+    }
+    .mid_r_text_2
+    {
+    color: #4A4A4A;
+    width: 455px;
+    height: 210px;
+    font-size: 16px;
+    line-height: 23px;
+     margin-top: 10px;
+    }
+    .mid-l img
+     {
+        width: 100%;
+        margin-left: 0px; 
+    }    
+    .under-mid-r
+     {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #4A4A4A;
+        height: 91px;
+        margin-top: 452px;
+        position: absolute;
+        width: 521px;
+        margin-left: -20px;
+    }
+    .one {
+        padding-top: 40px;
+        padding-left: 5px;
+        border-right: 0.3px solid #4A4A4A;
+        width: 50%;
+        font-size: 11px;
+    }    
+    .two 
+    {
+        align-items: center;
+        display: flex;
+        padding-top: 17px;
+        padding-left: 5px;
+        background: #C3002F;
+        color: white;
+        width: 50%;
+        font-size: 9px;
+        height: 90px;
+    }
+    .cards 
+    {
+        height: 400px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+        flex-direction: row;
+        margin-top: 150px;
+        margin-left: -50px;
+    }
+    .card 
+    {
+        margin-left: 80px;
+        width: 100%;
+        height: 100%;
+    }
+    .card_du
+    {
+        margin-top: 68px;
+    }        
+    .hr_card
+    {
+            width:0;
+            margin-left:0;
+            margin-top:0;
+            display: none;
+    }    
+    .left 
+    {
+        margin-top: 0px;
+        margin-left: 55px;
+    }    
+    .part1_h1
+    {
+        width: 260px;
+        line-height: 45px;
+    }
+    .right img 
+    {
+        height: 440px;
+        width: 678px;
+        margin-left: -64px;
+        cursor: pointer;
+    }
+    .part1 
+    {
+        display: flex;
+        flex-direction:column;
+        margin-top: 200px;
+    }
+    .part2 
+    {
+        display: flex;
+        flex-direction:column;
+        margin-left: 0px;
+        margin-top: 100px;
+    }    
+    .part2_h1
+    {
+        font-size: 44px;
+        width: 440px;
+        line-height: 45px;
+    }
+    .p-l 
+    {
+        margin-left: 30px;
+        line-height: 30px;
+    }
+    .first
+     {
+        margin-left: 20px;
+    }
+    .part3_h2 
+    {
+        width: 450px;
+        font-size: 30px;
+    }
+    .part3
+     {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }    
+    .form 
+    {
+        display: flex;
+        flex-direction:column;
+        gap: 10px;
+    }
+    .btn3 
+    {
+        background: #C3002F;
+        color: white;
+        width: 400px;
+        height: 45px;
+        border: none;
+        margin-left: 20px;
+    }
+    .form input 
+    {
+        width: 400px;
+        height: 45px;
+        margin-left: 20px;
+    }
+    .img img 
+    {
+        width: 507px;
+        margin-top: 0px;
+        margin-left: -10px;
+    }    
+    .hr1 
+    {
+        width: 600px;
+        margin-left: 0;
+        margin-top: 100px;
+    }
+    .part4
+     {
+        margin-left: 0px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .part4_img
+    {
+        width: 513px;
+    }        
+    .p-l1 
+    {
+        margin-top: 45px;
+        margin-left: 16px;
+    }    
+    .block1
+    {
+        width: 515px;
+    }
+    .part2_h4
+    {
+        display: none;
+    }    
+    .p-r img 
+    {
+        cursor: pointer;
+        margin-left:0 ;
+    }        
+    .part5_h5
+    {
+        display: none;
+    }
+    .five
+    {
+        width:515px; 
+    }
+    .part5 
+    {
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .form1
+     {
+        border: 1px solid #4A4A4A;
+        width: 626px;
+        height: 512px;
+        position: relative;
+        margin-top: -881px;
+        background: white;
+        margin-left: 0px;
+        text-align: none;
+        padding-top: 35px;
+        padding-left: 20px;
+    }
+    .form_h4
+    {
+            position: absolute;
+            margin-top: 55px;
+            margin-left: 19px
+    }
+    .construct
+    {
+        width: 507px;
+    }
+    .nodisp 
+    {
+        position:relative;
+        margin-top: 20px;
+    }    
+    .quest 
+    {
+        margin-left: 35px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+    }    
+    .foorm 
+    {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        margin-top: 60px;
+        gap: 10px;
+    }    
+    .foorm input
+     {
+        margin-left: 20px;
+        width: 400px;
+        padding: 5px;
+    }  
+    .part99 img 
+    {
+        display: none;
+
+    }
+    .img1 {
+        margin-left: 0px;
+    }        
+    .partners {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-top: 265px;
+    }   
+    footer
+     {
+        background: #151414;
+        height: 900px;
+        display: block;
+        margin-left: 0px;
+        flex-direction: column;
+        padding-top: 20px;
+    } 
+    .white
+    {
+        font-size: 16px;
+    }
+    .white_1
+    {
+        font-size: 12px;
+    }
+}
+
