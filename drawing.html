@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Drawing App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .canvas-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        canvas {
+            border: 2px solid #007bff;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .controls {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .controls label, .controls button, .controls select, .controls input {
+            margin-right: 10px;
+        }
+
+        .controls h2 {
+            margin-bottom: 20px;
+        }
+
+        #brushSize {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <h2>Beautiful Drawing App</h2>
+            <label>Color:</label>
+            <input type="color" id="colorPicker" value="#000000">
+            <label>Brush Size:</label>
+            <input type="range" id="brushSize" min="1" max="50" value="5">
+            <label>Font Size:</label>
+            <input type="range" id="fontSize" min="10" max="72" value="20">
+            <button id="clearBtn" class="btn btn-danger">Clear Canvas</button>
+            <label>Tool:</label>
+            <select id="toolSelector" class="form-select d-inline-block w-auto">
+                <option value="freehand">Freehand</option>
+                <option value="square">Square</option>
+                <option value="circle">Circle</option>
+                <option value="eraser">Eraser</option>
+                <option value="spray">Spray</option>
+                <option value="text">Text</option>
+            </select>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="drawingCanvas" width="1200" height="600"></canvas>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const canvas = $('#drawingCanvas')[0];
+            const ctx = canvas.getContext('2d');
+            let painting = false;
+            let brushColor = $('#colorPicker').val();
+            let brushSize = $('#brushSize').val();
+            let fontSize = $('#fontSize').val();
+            let tool = 'freehand';
+            let startX, startY;
+            const startPosition = (e) => {
+                startX = e.clientX - canvas.offsetLeft;
+                startY = e.clientY - canvas.offsetTop;
+                painting = true;
+
+                if (tool === 'text') {
+                    const text = prompt("Enter your text:");
+                    if (text) {
+                        ctx.font = `${fontSize}px Arial`;
+                        ctx.fillStyle = brushColor;
+                        ctx.fillText(text, startX, startY);
+                    }
+                } else if (tool === 'spray') {
+                    sprayPaint(e);
+                }
+            };
+            const endPosition = () => {
+                if (tool === 'square') {
+                    const endX = event.clientX - canvas.offsetLeft;
+                    const endY = event.clientY - canvas.offsetTop;
+                    const width = endX - startX;
+                    const height = endY - startY;
+                    ctx.strokeStyle = brushColor;
+                    ctx.lineWidth = brushSize;
+                    ctx.setLineDash([5, 15]);
+                    ctx.strokeRect(startX, startY, width, height);
+                    ctx.setLineDash([]);
+                } else if (tool === 'circle') {
+                    const endX = event.clientX - canvas.offsetLeft;
+                    const endY = event.clientY - canvas.offsetTop;
+                    const radius = Math.sqrt(Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2));
+                    ctx.strokeStyle = brushColor;
+                    ctx.lineWidth = brushSize;
+                    ctx.setLineDash([5, 5]);
+                    ctx.beginPath();
+                    ctx.arc(startX, startY, radius, 0, 2 * Math.PI);
+                    ctx.stroke();
+                    ctx.setLineDash([]);
+                }
+                painting = false;
+                ctx.beginPath();
+            };
+            const draw = (e) => {
+                if (!painting || tool !== 'freehand') return;
+
+                ctx.lineWidth = brushSize;
+                ctx.lineCap = 'round';
+                ctx.strokeStyle = brushColor;
+
+                ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+            };
+            const erase = (e) => {
+                if (!painting || tool !== 'eraser') return;
+
+                ctx.clearRect(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop, brushSize, brushSize);
+            };
+            const sprayPaint = (e) => {
+                if (tool !== 'spray') return;
+                const sprayDensity = 30;
+                for (let i = 0; i < sprayDensity; i++) {
+                    const offsetX = Math.random() * 20 - 10;
+                    const offsetY = Math.random() * 20 - 10;
+                    ctx.fillStyle = brushColor;
+                    ctx.fillRect(e.clientX - canvas.offsetLeft + offsetX, e.clientY - canvas.offsetTop + offsetY, 1, 1);
+                }
+            };
+            $('#drawingCanvas').on('mousedown', (e) => {
+                if (tool === 'eraser') {
+                    erase(e);
+                } else {
+                    startPosition(e);
+                }
+            });
+            $('#drawingCanvas').on('mouseup', endPosition);
+            $('#drawingCanvas').on('mousemove', (e) => {
+                if (tool === 'freehand') {
+                    draw(e);
+                } else if (tool === 'eraser') {
+                    erase(e);
+                } else if (tool === 'spray') {
+                    sprayPaint(e);
+                }
+            });
+            $('#colorPicker').on('input', function () {
+                brushColor = $(this).val();
+            });
+            $('#brushSize').on('input', function () {
+                brushSize = $(this).val();
+            });
+            $('#fontSize').on('input', function () {
+                fontSize = $(this).val();
+            });
+
+            $('#toolSelector').on('change', function () {
+                tool = $(this).val();
+            });
+            $('#clearBtn').click(function () {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            });
+        });
+    </script>
+</body>
+</html>
